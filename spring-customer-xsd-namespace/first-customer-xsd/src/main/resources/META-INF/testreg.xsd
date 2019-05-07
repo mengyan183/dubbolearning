@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!---->
-<xsd:schema xmlns="http://www.dangdang.com/schema/ddframe/reg"
+<!--
+xmlns:自定义默认命名空间;
+xmlns:xsd:引入xsd命名空间;
+xmlns:beans:引入spring beans 默认命名空间
+targetNamespace:自定义命名空间对应url地址
+elementFormDefault="qualified" : 限制引入该xsd的xml 如果需要使用该文件内的element,强制要求需要添加当前xsd文件名作为前缀
+attributeFormDefault="unqualified" : 限制引入该xsd的xml 如果需要使用该文件内的element下的 attribute,强制要求需要添加当前xsd文件名作为前缀
+-->
+<xsd:schema
+        xmlns="http://crayonshinchanxingguo.com/schema/frame/reg"
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:beans="http://www.springframework.org/schema/beans"
-        targetNamespace="http://www.dangdang.com/schema/ddframe/reg"
+        targetNamespace="http://crayonshinchanxingguo.com/schema/frame/reg"
         elementFormDefault="qualified"
         attributeFormDefault="unqualified">
     <xsd:import namespace="http://www.springframework.org/schema/beans"/>
