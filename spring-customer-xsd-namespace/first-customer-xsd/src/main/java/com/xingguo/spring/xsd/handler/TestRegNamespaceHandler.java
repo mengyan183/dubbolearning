@@ -3,6 +3,7 @@
  */
 package com.xingguo.spring.xsd.handler;
 
+import com.xingguo.spring.xsd.parser.ZookeeperBeanDefinitionParser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 /**
@@ -19,6 +20,6 @@ public class TestRegNamespaceHandler extends NamespaceHandlerSupport {
         // 注册自定义xsd bean解析 ;
         // param1 : elementName:xsd文件自定义 element名称
         // param2 : 自定义 xsd element bean解析类
-        registerBeanDefinitionParser("zookeeper",);
+        registerBeanDefinitionParser("zookeeper",new ZookeeperBeanDefinitionParser());
     }
 }
