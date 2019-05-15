@@ -14,12 +14,17 @@ attributeFormDefault="unqualified" : 限制引入该xsd的xml 如果需要使用
         targetNamespace="http://crayonshinchanxingguo.com/schema/frame/reg"
         elementFormDefault="qualified"
         attributeFormDefault="unqualified">
+    <!--xsd:import导入其他命名空间-->
     <xsd:import namespace="http://www.springframework.org/schema/beans"/>
-    
+    <!--xsd:element 定义元素名称-->
     <xsd:element name="zookeeper">
+        <!--xsd:complexType 定义当前元素为复杂类型-->
         <xsd:complexType>
+            <!-- xsd:complexContent 对复杂类型的拓展或限制-->
             <xsd:complexContent>
+                <!--extension 元素对 simpleType 或 complexType 的元素进行扩展-->
                 <xsd:extension base="beans:identifiedType">
+                    <!--定义元素属性名和类型相关配置项 http://www.w3school.com.cn/schema/el_attribute.asp-->
                     <xsd:attribute name="server-lists" type="xsd:string" use="required" />
                     <xsd:attribute name="namespace" type="xsd:string" use="required" />
                     <xsd:attribute name="base-sleep-time-milliseconds" type="xsd:string" />
