@@ -1,0 +1,2 @@
+#xsd文件中定义的targetNamespace=自定义namespace实现类
+http://crayonshinchanxingguo.com/schema/frame/reg=com.xingguo.spring.xsd.handler.TestRegNamespaceHandler
